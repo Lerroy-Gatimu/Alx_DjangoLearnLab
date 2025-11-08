@@ -1,7 +1,8 @@
-# RETRIEVE Operation
+# Retrieve Book Instance
 
 ```python
-from bookshelf.models import Book
-Book.objects.all()
-# Expected Output:
-# <QuerySet [<Book: 1984 by George Orwell (1949)>]>
+# Retrieve and display all attributes of the book
+book = Book.objects.get(title="1984")
+print(book.title, book.author, book.publication_year)
+# Expected output: 1984 George Orwell 1949
+
